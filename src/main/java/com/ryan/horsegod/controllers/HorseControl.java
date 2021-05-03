@@ -7,17 +7,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ryan.horsegod.models.Mare;
+import com.ryan.horsegod.models.Broodmare;
 import com.ryan.horsegod.models.Stud;
 import com.ryan.horsegod.nodes.Node;
+import com.ryan.horsegod.services.BroodmareService;
 import com.ryan.horsegod.services.FoalService;
-import com.ryan.horsegod.services.MareService;
 import com.ryan.horsegod.services.StudService;
 import com.ryan.horsegod.services.UserService;
 
 @Controller
 public class HorseControl {
-	private MareService mareServ;
+	private BroodmareService broodmareServ;
 	private StudService studServ;
 	private FoalService foalServ;
 	private UserService userServ;
@@ -41,8 +41,8 @@ public class HorseControl {
 	double seedGait = 0.0d;
 	double seedEndurance = 0.0d;
 	
-	public HorseControl(MareService mareServ, StudService studServ, FoalService foalServ, UserService userServ) {
-		this.mareServ = mareServ;
+	public HorseControl(BroodmareService broodmareServ, StudService studServ, FoalService foalServ, UserService userServ) {
+		this.broodmareServ = broodmareServ;
 		this.studServ = studServ;
 		this.foalServ = foalServ;
 		this.userServ = userServ;
@@ -61,11 +61,11 @@ public class HorseControl {
 //	}
 	
 	@RequestMapping("/horsegod")
-	public String horseGod(@ModelAttribute("stud") Stud s, @ModelAttribute("mare") Mare m, Model model, Principal principal) {
+	public String horseGod(@ModelAttribute("stud") Stud s, @ModelAttribute("broodmare") Broodmare b, Model model, Principal principal) {
 		String username = principal.getName();
 		model.addAttribute("currentUser", userServ.findByUsername(username));
 		model.addAttribute("allStuds", studServ.allStuds());
-		model.addAttribute("allMares", mareServ.allMares());
+		model.addAttribute("allBroods", broodmareServ.allBroods());
 		model.addAttribute("allFoals", foalServ.allFoals());
 		return "/horse/main/horse.jsp";
 	}

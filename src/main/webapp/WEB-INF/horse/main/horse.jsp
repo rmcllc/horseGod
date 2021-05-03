@@ -49,10 +49,10 @@
 	        <p></p>
 	        	<input type="submit" value="create">
 	    </form:form>
-	    <p><form:errors path="mare.*"/></p>
+	    <p><form:errors path="broodmare.*"/></p>
 	    
-	    <form:form method="PUT" action="/marenheir" modelAttribute="mare">
-	    <h2>Mare Statistics</h2>
+	    <form:form method="PUT" action="/marenheir" modelAttribute="broodmare">
+	    <h2>Broodmare Statistics</h2>
 	    	<p>
 	    		<form:label path="height">Height:</form:label>
 	    		

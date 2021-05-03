@@ -29,17 +29,18 @@
 	    <a href="/allstallions" id="button">View Available Stallions</a>
 	    <a href="/allmares" id="button">View Available Mares</a>
 	    <a href="/allstuds" id="button">View Available Studs</a>
+	    <a href="/allbroods" id="button">View Available Broodmares</a>
 	    <h2>Your Stable</h2>
 	    	<h2>Stallions</h2>
 	    	<table>
 	    		<tr>
-	    			<td>Stallion</td>
-		    		<td>ID</td>
-		    		<td>Height</td>
-		    		<td>Weight</td>
-		    		<td>Speed</td>
-		    		<td>Gait</td>
-		    		<td>Endurance</td>
+	    			<th>Stallion</th>
+		    		<th>ID</th>
+		    		<th>Height</th>
+		    		<th>Weight</th>
+		    		<th>Speed</th>
+		    		<th>Gait</th>
+		    		<th>Endurance</th>
 	    		</tr>
 	    		<c:forEach items="${allStalls}" var="stallion">
 	    		<tr>
@@ -56,13 +57,13 @@
 	    	<h2>Mares</h2>
 	    	<table>
 	    		<tr>
-	    			<td>Mare</td>
-		    		<td>ID</td>
-		    		<td>Height</td>
-		    		<td>Weight</td>
-		    		<td>Speed</td>
-		    		<td>Gait</td>
-		    		<td>Endurance</td>
+	    			<th>Mare</th>
+		    		<th>ID</th>
+		    		<th>Height</th>
+		    		<th>Weight</th>
+		    		<th>Speed</th>
+		    		<th>Gait</th>
+		    		<th>Endurance</th>
 	    		</tr>
 	    		<c:forEach items="${allMares}" var="mare">
 	    		<tr>
@@ -79,13 +80,13 @@
 	    	<h2>Studs</h2>
 	    	<table>
 	    		<tr>
-	    			<td>Stud</td>
-		    		<td>ID</td>
-		    		<td>Height</td>
-		    		<td>Weight</td>
-		    		<td>Speed</td>
-		    		<td>Gait</td>
-		    		<td>Endurance</td>
+	    			<th>Stud</th>
+		    		<th>ID</th>
+		    		<th>Height</th>
+		    		<th>Weight</th>
+		    		<th>Speed</th>
+		    		<th>Gait</th>
+		    		<th>Endurance</th>
 	    		</tr>
 	    		<c:forEach items="${allStuds}" var="stud">
 	    		<tr>
@@ -102,13 +103,13 @@
 	    	<h2>Broodmares</h2>
 	    	<table>
 	    		<tr>
-	    			<td>Broodmare</td>
-		    		<td>ID</td>
-		    		<td>Height</td>
-		    		<td>Weight</td>
-		    		<td>Speed</td>
-		    		<td>Gait</td>
-		    		<td>Endurance</td>
+	    			<th>Broodmare</th>
+		    		<th>ID</th>
+		    		<th>Height</th>
+		    		<th>Weight</th>
+		    		<th>Speed</th>
+		    		<th>Gait</th>
+		    		<th>Endurance</th>
 	    		</tr>
 	    		<c:forEach items="${allBroods}" var="brood">
 	    		<tr>

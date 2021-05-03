@@ -63,12 +63,6 @@ public class MareControl {
 		this.broodServ = broodServ;
 	}
 	
-	@RequestMapping(value="/marenheir", method=RequestMethod.PUT)
-	public String mareCreator(@ModelAttribute("mare") Mare m) {
-		mareServ.createMare(m);
-		return "redirect:/home";
-	}
-	
 	@RequestMapping("/allmares")
 	public String allMares(Principal principal, Model model) {
 		String username = principal.getName();

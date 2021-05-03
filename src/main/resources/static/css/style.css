@@ -1,6 +1,6 @@
 body {
-	background-color: #1d212e;
-	color: #aaaaaa;
+	background-color: #9b7653;
+	color: #000000;
 	border-color: #aaaaaa;
 	margin: 20px;
 	width: 1280px;
@@ -22,8 +22,8 @@ body {
 }
 
 form {
-	color: #1d212e;
-	background-color: #aaaaaa;
+	color: #9b7653;
+	background-color: #3b4a37;
 	font-size: 12px;
 	width: auto;
 	display: flex;
@@ -38,10 +38,14 @@ table {
 	font-size: 13px;
 	padding: 4px 10px;
 } 
+
 td {
+	background-color: #3b4a37;
+	-webkit-text-stroke: 0.5px #3b4a37;
+	color: #9b7653;
 	font-size: 13px;
 	min-width: 25px;
-	border: 2px solid #aaaaaa;
+	border: 2px solid #9b7653;
 	border-radius: 3px;
 	padding: 4px 10px;
 }
@@ -91,8 +95,9 @@ td {
 }
 
 #logoutForm {
-	background-color: #1d212e;
 	margin: 10px;
+	border: 0px;
+	background-color: transparent;
 }
 
 
