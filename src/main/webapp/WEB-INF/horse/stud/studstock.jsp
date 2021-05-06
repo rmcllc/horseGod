@@ -28,7 +28,7 @@
 			</tr>
 			<c:forEach items="${allStuds}" var="stud">
 			<tr>
-				<form:form method="put" action="/findmare/${stud.id}">
+				<form:form method="put" action="/findbrood/${stud.id}">
 				<input type="hidden" name="_method" value="put">
 				<td>${stud.id}</td>
 				<td>${stud.height}</td>

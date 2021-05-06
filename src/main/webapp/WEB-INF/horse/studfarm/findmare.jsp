@@ -9,12 +9,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Find a Mare</title>
+<title>Find a Broodmare</title>
 <base href="/">
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-	<h1>Find Your Mare</h1>
+	<h1>Find Your Broodmare</h1>
 	<div>
 		<h2>Your Stud</h2>
 		
@@ -39,7 +39,7 @@
 		</table>
 	</div>
 	<div>
-		<h2>Select Your Mare</h2>
+		<h2>Select Your Broodmare</h2>
 		<table>
 			<tr>
 				<th>ID</th>
@@ -50,15 +50,15 @@
 				<th>Endurance</th>
 				<th>Actions</th>
 			</tr>
-			<c:forEach items="${allMares}" var="mare">
+			<c:forEach items="${allBroods}" var="brood">
 			<tr>
-				<td>${mare.id}</td>
-				<td>${mare.height}</td>
-				<td>${mare.weight}</td>
-				<td>${mare.speed}</td>
-				<td>${mare.gait}</td>
-				<td>${mare.endurance}</td>
-				<th><a href="/mareinfo/${mare.id}" id="button">More Info</a> | <a href="/confirm/${stud.id}/${mare.id}" id="button">Select</a></th>
+				<td>${brood.id}</td>
+				<td>${brood.height}</td>
+				<td>${brood.weight}</td>
+				<td>${brood.speed}</td>
+				<td>${brood.gait}</td>
+				<td>${brood.endurance}</td>
+				<th><a href="/broodmareinfo/${brood.id}" id="button">More Info</a> | <a href="/confirm/${stud.id}/${brood.id}" id="button">Select</a></th>
 			</tr>
 			</c:forEach>
 		</table>

@@ -39,7 +39,7 @@
 				</tr>
 			</table>
 	
-			<h2>Your Mare</h2>
+			<h2>Broodmare</h2>
 			<table id="selected">
 				<tr>
 					<th>ID</th>
@@ -51,19 +51,19 @@
 	
 				</tr>
 				<tr>
-					<td>${mare.id}</td>
-					<td>${mare.height}</td>
-					<td>${mare.weight}</td>
-					<td>${mare.speed}</td>
-					<td>${mare.gait}</td>
-					<td>${mare.endurance}</td>
+					<td>${brood.id}</td>
+					<td>${brood.height}</td>
+					<td>${brood.weight}</td>
+					<td>${brood.speed}</td>
+					<td>${brood.gait}</td>
+					<td>${brood.endurance}</td>
 					<th><a href="/findmare/${stud.id}" id="buttonX">CHANGE</a></th>
 				</tr>
 			</table>
 	
-			<form:form action="/hayroll/${studId}/${mareId}" method="post">
+			<form:form action="/hayroll/${studId}/${broodId}" method="post">
 				<p>Confirmed Stud ID: ${studId}</p>
-				<p>Confirmed Mare ID: ${mareId}</p>
+				<p>Confirmed Broodmare ID: ${broodId}</p>
 				<button type="submit" value="Make Baby Horse" id="buttonX">Make Baby Horse</button>
 			</form:form>
 		</div>

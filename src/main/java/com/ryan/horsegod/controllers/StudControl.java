@@ -15,13 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.ryan.horsegod.models.Mare;
 import com.ryan.horsegod.models.Stud;
 import com.ryan.horsegod.nodes.Node;
+import com.ryan.horsegod.services.BroodmareService;
 import com.ryan.horsegod.services.MareService;
 import com.ryan.horsegod.services.StudService;
 
 @Controller
 public class StudControl {
 	private final StudService studServ;
-	private final MareService mareServ;
+	private final BroodmareService broodServ;
 	public Node head;
 	public Node tail;
 	double height = 6.4d;
@@ -30,9 +31,9 @@ public class StudControl {
 	double gait = 4.003d;
 	double endurance = 9.0d;
 	
-	public StudControl(StudService studServ, MareService mareServ) {
+	public StudControl(StudService studServ, BroodmareService broodServ) {
 		this.studServ = studServ;
-		this.mareServ = mareServ;
+		this.broodServ = broodServ;
 	}
 
 	@RequestMapping(value="/studify", method=RequestMethod.PUT)
@@ -54,10 +55,10 @@ public class StudControl {
 		return "/horse/stud/studinfo.jsp";
 	}
 	
-	@RequestMapping("/findmare/{id}")
-	public String findMareForStud(@ModelAttribute("stud") Stud stud, @ModelAttribute("mare") Mare mare, BindingResult result, @PathVariable(value="id") UUID id, Model model) {
+	@RequestMapping("/findbrood/{id}")
+	public String findBroodForStud(@ModelAttribute("stud") Stud stud, @ModelAttribute("mare") Mare mare, BindingResult result, @PathVariable(value="id") UUID id, Model model) {
 		model.addAttribute("stud", studServ.findStudById(id));
-		model.addAttribute("allMares", mareServ.allMares());
+		model.addAttribute("allBroods", broodServ.allBroods());
 		return "/horse/studfarm/findmare.jsp";
 	}
 }
