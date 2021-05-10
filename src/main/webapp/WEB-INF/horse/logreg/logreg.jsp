@@ -34,7 +34,7 @@
 	    	</p>
 	    	<p>
 	    		<form:label path="state">State:</form:label>
-	            <form:select path="state">
+	            <form:select path="state" class="select-box">
 	            <form:option value="AL" label="Alabama"/>
 	            <form:option value="AK" label="Alaska"/>
 	            <form:option value="AZ" label="Arizona"/>
@@ -104,7 +104,7 @@
 	            <form:label path="passwordConfirmation">Password Confirmation:</form:label>
 	            <form:password path="passwordConfirmation"/>
 	        </p>
-	        <input type="submit" value="Register!"/>
+	        	<input type="submit" value="Register!" id="buttonX"/>
 	    </form:form>
     </div>
     <div>
@@ -112,21 +112,21 @@
     	<c:if test="${logoutMessage != null}">
 			<c:out value="${logoutMessage}"></c:out>
 		</c:if>
-    	<h1>Login</h1>
+    	<h1>Login!</h1>
     	<c:if test="${errorMessage != null}">
     		<p><c:out value="${errorMessage}"/></p>
     	</c:if>
     	<form method="post" action="/login">
 	        <p>
-	            <label for="username">Username</label>
+	            <label for="username">Username:</label>
 	            <input type="text" id="username" name="username"/>
 	        </p>
 	        <p>
-	            <label for="password">Password</label>
+	            <label for="password">Password:</label>
 	            <input type="password" id="password" name="password"/>
 	        </p>
 	        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-	        <input type="submit" value="Login!"/>
+	        <input type="submit" value="Login!" id="buttonX"/>
     	</form>
     </div>
 	</div>
