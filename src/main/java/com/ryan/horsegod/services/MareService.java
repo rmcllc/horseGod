@@ -21,7 +21,7 @@ public class MareService {
 		mareRepo.save(m);
 	}
 	
-	public Mare updateMare(UUID id, Double height, Double weight, Double speed, Double gait, Double endurance) {
+	public Mare updateMare(UUID id, Double height, Double weight, Double speed, Double gait, Double endurance, UUID broodId) {
 		Optional<Mare> optionalMare = mareRepo.findById(id);
 		if(optionalMare.isPresent()) {
 			Mare editMare = optionalMare.get();
@@ -30,6 +30,7 @@ public class MareService {
 			editMare.setHeight(speed);
 			editMare.setHeight(gait);
 			editMare.setHeight(endurance);
+			editMare.setBroodmareId(broodId);
 			mareRepo.save(editMare);
 		} else {
 			return null;
