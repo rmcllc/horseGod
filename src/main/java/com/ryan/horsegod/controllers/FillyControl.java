@@ -60,7 +60,7 @@ public class FillyControl {
 		mare.setGait(filly.getGait());
 		mare.setEndurance(filly.getEndurance());
 		mare.setFilly(filly);
-		mare.setDamId(null);
+		mare.setBroodmareId(null);
 		mare.setUser(user);
 		mareServ.createMare(mare);
 		return "redirect:/home";

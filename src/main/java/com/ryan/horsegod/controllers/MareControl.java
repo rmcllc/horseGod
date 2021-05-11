@@ -5,11 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ryan.horsegod.models.Broodmare;
 import com.ryan.horsegod.models.Mare;
 import com.ryan.horsegod.models.User;
 import com.ryan.horsegod.services.BroodmareService;
@@ -69,6 +74,25 @@ public class MareControl {
 	public String mareInfo(@PathVariable(value="id") UUID id, Model model) {
 		model.addAttribute("mare", mareServ.findMare(id));
 		return "/horse/mare/mareinfo.jsp";
+	}
+	
+	@RequestMapping("/broodfarm/{id}")
+	public String mareFarm(@Valid @ModelAttribute("broodId") UUID broodId, BindingResult result, @ModelAttribute("mare") Mare mare, BindingResult result2, @ModelAttribute("broodmare") Broodmare brood, BindingResult result3, @PathVariable(value="id") UUID id, Principal principal, Model model) {
+		mare = mareServ.findMare(id);
+		String username = principal.getName();
+		User user = userServ.findByUsername(username);
+		Broodmare newBrood = new Broodmare();
+		newBrood.setHeight(mare.getHeight());
+		newBrood.setWeight(mare.getWeight());
+		newBrood.setSpeed(mare.getSpeed());
+		newBrood.setGait(mare.getGait());
+		newBrood.setEndurance(mare.getEndurance());
+		newBrood.setMare(mare);
+		newBrood.setUser(user);
+		broodServ.create(newBrood);
+		broodId = newBrood.getId();
+		mareServ.updateMare(id, mare.getHeight(), mare.getWeight(), mare.getSpeed(), mare.getGait(), mare.getEndurance(), broodId);
+		return "redirect:/home";
 	}
 	
 	
