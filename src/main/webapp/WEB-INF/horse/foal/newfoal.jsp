@@ -16,11 +16,11 @@
 <body>
 	<div>
 	<h1>The Baby Barn</h1>
-	<a href="/home" id="button">Visit Stable</a>
+	<a href="/home" class="button">Visit Stable</a>
 		<h2>Your Foal</h2>
 		<table id="selected">
 			<tr>
-				<th>ID</th>
+				<th>Foal Id</th>
 				<th>Height</th>
 				<th>Weight</th>
 				<th>Speed</th>
@@ -71,12 +71,12 @@
 				<th>Endurance</th>
 			</tr>
 			<tr>
-				<td>${mare.id}</td>
-				<td>${mare.height}</td>
-				<td>${mare.weight}</td>
-				<td>${mare.speed}</td>
-				<td>${mare.gait}</td>
-				<td>${mare.endurance}</td>
+				<td>${brood.id}</td>
+				<td>${brood.height}</td>
+				<td>${brood.weight}</td>
+				<td>${brood.speed}</td>
+				<td>${brood.gait}</td>
+				<td>${brood.endurance}</td>
 			</tr>
 		</table>
 	</div>

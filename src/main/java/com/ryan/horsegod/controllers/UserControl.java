@@ -18,8 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.ryan.horsegod.models.Broodmare;
 import com.ryan.horsegod.models.Stallion;
 import com.ryan.horsegod.models.User;
+import com.ryan.horsegod.services.BroodmareService;
 import com.ryan.horsegod.services.MareService;
 import com.ryan.horsegod.services.StallionService;
 import com.ryan.horsegod.services.StudService;
@@ -33,14 +35,16 @@ public class UserControl {
 	private MareService mareServ;
 	private StudService studServ;
 	private StallionService stallServ;
+	private BroodmareService broodServ;
 	
 	
-	public UserControl(StallionService stallServ, StudService studServ, UserService userServ, UserValidator userVal, MareService mareServ) {
+	public UserControl(StallionService stallServ, StudService studServ, UserService userServ, UserValidator userVal, MareService mareServ, BroodmareService broodServ) {
 		this.userServ = userServ;
 		this.userVal = userVal;
 		this.mareServ = mareServ;
 		this.stallServ = stallServ;
 		this.studServ = studServ;
+		this.broodServ = broodServ;
 	}
 	
 	@RequestMapping("/registration")
@@ -87,6 +91,7 @@ public class UserControl {
 			model.addAttribute("currentUser", userServ.findByUsername(username));
 			model.addAttribute("allMares", mareServ.allOwnedMares(user.getId()));
 			model.addAttribute("allStuds", studServ.allOwnedStuds(user.getId()));
+			model.addAttribute("allBroods", broodServ.allOwnedBroods(user.getId()));
 			List<Stallion> stallion = stallServ.allOwnedStallions(user.getId());
 			List<Stallion> notStud = new ArrayList<Stallion>();
 			for(int i=0; i<stallion.size(); i++) {

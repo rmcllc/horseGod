@@ -87,7 +87,7 @@ public class BroodmareControl {
 	@RequestMapping("/broodmareinfo/{id}")
 	public String broodmareInfo(@PathVariable(value="id") UUID id, Model model) {
 		model.addAttribute("brood", broodServ.findBroodById(id));
-		return "/horse/mare/broodmareinfo.jsp";
+		return "/horse/broodmare/broodmareinfo.jsp";
 	}
 	
 	@RequestMapping("/confirm/{studId}/{broodId}")
