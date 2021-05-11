@@ -34,7 +34,7 @@
 				<td>${mare.speed}</td>
 				<td>${mare.gait}</td>
 				<td>${mare.endurance}</td>
-				
+				<th><a href="/broodfarm/${mare.id}" class="button">Retire to Breeding Farm</a></th>
 			</tr>
 		</table>
 	</div>
