@@ -36,7 +36,7 @@ public class Mare extends Trait {
 	@Column(updatable = false)
 	private Date createdAt;
 	private Date updatedAt;
-	private UUID damId;
+	private UUID broodmareId;
 	@OneToOne(mappedBy="mare", cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	private Broodmare broodmare;
 	@OneToOne(fetch = FetchType.LAZY)
@@ -122,12 +122,12 @@ public class Mare extends Trait {
 		this.updatedAt = updatedAt;
 	}
 
-	public UUID getDamId() {
-		return damId;
+	public UUID getBroodmareId() {
+		return broodmareId;
 	}
 
-	public void setDamId(UUID damId) {
-		this.damId = damId;
+	public void setBroodmareId(UUID broodmareId) {
+		this.broodmareId = broodmareId;
 	}
 
 	public Broodmare getBroodmare() {
