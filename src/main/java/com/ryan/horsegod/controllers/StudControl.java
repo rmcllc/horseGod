@@ -16,7 +16,6 @@ import com.ryan.horsegod.models.Mare;
 import com.ryan.horsegod.models.Stud;
 import com.ryan.horsegod.nodes.Node;
 import com.ryan.horsegod.services.BroodmareService;
-import com.ryan.horsegod.services.MareService;
 import com.ryan.horsegod.services.StudService;
 
 @Controller
