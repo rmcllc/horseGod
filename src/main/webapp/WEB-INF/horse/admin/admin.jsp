@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>Welcome to the Admin Page <c:out value="${currentUser.username}"></c:out></h1>
-    <a href="/home" id="button">Go to Dashboard</a>
+    <a href="/home" class="button">Go to Dashboard</a>
     <table>
     	<h3>All Users</h3>
     	<tr>
@@ -26,11 +26,11 @@
     		<td>${user.createdAt}</td>
     		<td>${user.updatedAt}</td>
     		<td>${user.roles}</td>
-    		<td><form action="/destroy/${user.id}" id="button" method="post">
+    		<td><form action="/destroy/${user.id}" class="button" method="post">
 			<input type="hidden" name="_method" value="delete">
 			<input type="submit" value="Delete"/>
 			</form></td>
-			<td><a href="/edituser/${user.id}" id="button">Edit</a></td>
+			<td><a href="/edituser/${user.id}" class="button">Edit</a></td>
     	</tr>	
     	</c:forEach>
     	

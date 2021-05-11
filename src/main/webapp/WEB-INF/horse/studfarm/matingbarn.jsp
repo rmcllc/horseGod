@@ -19,7 +19,7 @@
 		<div>
 		<form:errors path="stud.*"/>
 			<h2>Your Stud</h2>
-			<table id="selected">
+			<table class="selected">
 				<tr>
 					<th>ID</th>
 					<th>Height</th>
@@ -35,12 +35,12 @@
 					<td>${stud.speed}</td>
 					<td>${stud.gait}</td>
 					<td>${stud.endurance}</td>
-					<th><a href="/allstuds" id="buttonX">CANCEL</a></th>
+					<th><a href="/allstuds" class="buttonX">CANCEL</a></th>
 				</tr>
 			</table>
 	
 			<h2>Broodmare</h2>
-			<table id="selected">
+			<table class="selected">
 				<tr>
 					<th>ID</th>
 					<th>Height</th>
@@ -57,14 +57,14 @@
 					<td>${brood.speed}</td>
 					<td>${brood.gait}</td>
 					<td>${brood.endurance}</td>
-					<th><a href="/findmare/${stud.id}" id="buttonX">CHANGE</a></th>
+					<th><a href="/findmare/${stud.id}" class="buttonX">CHANGE</a></th>
 				</tr>
 			</table>
 	
 			<form:form action="/hayroll/${studId}/${broodId}" method="post">
 				<p>Confirmed Stud ID: ${studId}</p>
 				<p>Confirmed Broodmare ID: ${broodId}</p>
-				<button type="submit" value="Make Baby Horse" id="buttonX">Make Baby Horse</button>
+				<button type="submit" value="Make Baby Horse" class="buttonX">Make Baby Horse</button>
 			</form:form>
 		</div>
 	</div>

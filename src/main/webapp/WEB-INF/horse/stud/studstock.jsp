@@ -14,7 +14,7 @@
 </head>
 <body>
 	<h1>Our Current Stud Stock</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<table>
 			<form:errors path="stud.*"/>
@@ -41,7 +41,7 @@
 				<input type="hidden" value="${stud.gait}">
 				<td>${stud.endurance}</td>
 				<input type="hidden" value="${stud.endurance}">
-				<th><a href="/studinfo/${stud.id}" id="button">More Info</a> | <input type="submit" id="button" value="Select"/></th>
+				<th><a href="/studinfo/${stud.id}" class="button">More Info</a> | <input type="submit" class="button" value="Select"/></th>
 				</form:form>
 			</tr>
 			</c:forEach>

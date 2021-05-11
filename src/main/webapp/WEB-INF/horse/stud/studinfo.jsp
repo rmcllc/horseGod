@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h1>Stud Stats</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<h2>Stud ${stud.id} Report:</h2>
 		<table>
@@ -34,7 +34,7 @@
 				<td>${stud.speed}</td>
 				<td>${stud.gait}</td>
 				<td>${stud.endurance}</td>
-				<th><a href="/findmare/${stud.id}" id="button">Select a Mare</a></th>
+				<th><a href="/findmare/${stud.id}" class="button">Select a Mare</a></th>
 			</tr>
 		</table>
 	</div>

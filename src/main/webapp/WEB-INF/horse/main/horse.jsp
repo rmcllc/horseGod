@@ -16,7 +16,7 @@
 	<div id="wrapper">
 		<div>
 	    <h1>Horse Frame</h1>
-	    <a href="/allstuds" id="button">View Available Studs</a>
+	    <a href="/allstuds" class="button">View Available Studs</a>
 	    <p><form:errors path="stud.*"/></p>
 	    
 	    <form:form method="PUT" action="/studify" modelAttribute="stud">

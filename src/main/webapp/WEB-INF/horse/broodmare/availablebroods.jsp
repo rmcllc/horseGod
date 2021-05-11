@@ -14,7 +14,7 @@
 </head>
 <body>
 	<h1>Current Available Broodmares</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<table>
 			<tr>
@@ -33,7 +33,7 @@
 				<td>${brood.speed}</td>
 				<td>${brood.gait}</td>
 				<td>${brood.endurance}</td>
-				<th><a href="/broodmareinfo/${brood.id}" id="button">More Info</a> | <a href="/broodmarefarm/${brood.id}" id="button">Select</a></th>
+				<th><a href="/broodmareinfo/${brood.id}" class="button">More Info</a></th>
 			</tr>
 			</c:forEach>
 		</table>

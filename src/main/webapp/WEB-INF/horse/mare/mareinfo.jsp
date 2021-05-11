@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h1>Mare Statistics</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<h2>Mare ${mare.id} Report:</h2>
 		<table>
@@ -34,7 +34,7 @@
 				<td>${mare.speed}</td>
 				<td>${mare.gait}</td>
 				<td>${mare.endurance}</td>
-				<th><a href="/studfarm/${stud.id}/${mare.id}" id="button">Select</a></th>
+				
 			</tr>
 		</table>
 	</div>

@@ -14,7 +14,7 @@
 </head>
 <body>
 	<h1>Currently Available Colts</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<table>
 			<c:forEach items="${allColts}" var="colt">
@@ -33,7 +33,7 @@
 				<td>${colt.speed}</td>
 				<td>${colt.gait}</td>
 				<td>${colt.endurance}</td>
-				<td><a href="/colt/${colt.id}" id="buttonX">More Info</a> | <a href="/coltselected/${colt.id}" id="buttonX">Select</a></td>
+				<td><a href="/colt/${colt.id}" class="buttonX">More Info</a> | <a href="/coltselected/${colt.id}" class="buttonX">Select</a></td>
 			</tr>
 			</c:forEach>
 		</table>

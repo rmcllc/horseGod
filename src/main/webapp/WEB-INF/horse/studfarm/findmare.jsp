@@ -18,7 +18,7 @@
 	<div>
 		<h2>Your Stud</h2>
 		
-		<table id="selected">
+		<table class="selected">
 			<tr>
 				<th>Id</th>
 				<th>Height</th>
@@ -34,7 +34,7 @@
 				<td>${stud.speed}</td>
 				<td>${stud.gait}</td>
 				<td>${stud.endurance}</td>
-				<th><a href="/allstuds" id="buttonX">CANCEL</a></th>
+				<th><a href="/allstuds" class="buttonX">CANCEL</a></th>
 			</tr>
 		</table>
 	</div>
@@ -58,7 +58,7 @@
 				<td>${brood.speed}</td>
 				<td>${brood.gait}</td>
 				<td>${brood.endurance}</td>
-				<th><a href="/broodmareinfo/${brood.id}" id="button">More Info</a> | <a href="/confirm/${stud.id}/${brood.id}" id="button">Select</a></th>
+				<th><a href="/broodmareinfo/${brood.id}" class="button">More Info</a> | <a href="/confirm/${stud.id}/${brood.id}" class="button">Select</a></th>
 			</tr>
 			</c:forEach>
 		</table>

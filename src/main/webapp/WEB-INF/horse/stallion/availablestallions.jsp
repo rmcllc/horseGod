@@ -14,7 +14,7 @@
 </head>
 <body>
 	<h1>Current Available Stallions</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<table>
 			<tr>
@@ -33,7 +33,7 @@
 				<td>${stallion.speed}</td>
 				<td>${stallion.gait}</td>
 				<td>${stallion.endurance}</td>
-				<th><a href="/stallioninfo/${stallion.id}" id="button">More Info</a> | <a href="/stallionfarm/${stallion.id}" id="button">Select</a></th>
+				<th><a href="/stallioninfo/${stallion.id}" class="button">More Info</a> | <a href="/stallionfarm/${stallion.id}" class="button">Select</a></th>
 			</tr>
 			</c:forEach>
 		</table>

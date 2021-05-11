@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h1>Stallion Stats</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<h2>Stallion ${stallion.id} Report:</h2>
 		<table>
@@ -34,7 +34,7 @@
 				<td>${stallion.speed}</td>
 				<td>${stallion.gait}</td>
 				<td>${stallion.endurance}</td>
-				<th><a href="/studfarm/${stallion.id}" id="button">Retire to Stud</a></th>
+				<th><a href="/studfarm/${stallion.id}" class="button">Retire to Stud</a></th>
 			</tr>
 		</table>
 	</div>

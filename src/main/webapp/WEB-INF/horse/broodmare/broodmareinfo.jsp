@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h1>Broodmare Statistics</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<h2>Broodmare ${brood.id} Report:</h2>
 		<table>
@@ -34,7 +34,7 @@
 				<td>${brood.speed}</td>
 				<td>${brood.gait}</td>
 				<td>${brood.endurance}</td>
-				<th><a href="/studfarm/${stud.id}/${brood.id}" id="button">Select</a></th>
+
 			</tr>
 		</table>
 	</div>

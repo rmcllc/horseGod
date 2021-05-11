@@ -14,7 +14,7 @@
 </head>
 <body>
 	<h1>Current Available Mares</h1>
-	<p><a href="/home" id="button">My Stable</a></p>
+	<p><a href="/home" class="button">My Stable</a></p>
 	<div>
 		<table>
 			<tr>
@@ -33,7 +33,7 @@
 				<td>${mare.speed}</td>
 				<td>${mare.gait}</td>
 				<td>${mare.endurance}</td>
-				<th><a href="/mareinfo/${mare.id}" id="button">More Info</a> | <a href="/marefarm/${mare.id}" id="button">Select</a></th>
+				<th><a href="/mareinfo/${mare.id}" class="button">More Info</a> | <a href="/marefarm/${mare.id}" class="button">Select</a></th>
 			</tr>
 			</c:forEach>
 		</table>

@@ -126,7 +126,7 @@
 	            <input type="password" id="password" name="password"/>
 	        </p>
 	        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-	        <input type="submit" value="Login!" id="buttonX"/>
+	        <input type="submit" value="Login!" class="buttonX"/>
     	</form>
     </div>
 	</div>

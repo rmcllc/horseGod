@@ -20,16 +20,16 @@
 				<h1>Welcome ${currentUser.fname}</h1>
 				<form id="logoutForm" method="POST" action="/logout">
 			        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-			        <input type="submit" id="button_log" value="Logout"/>
+			        <input type="submit" class="button_log" value="Logout"/>
 			    </form>
 			
 			</div>
 
 		<div>
-	    <a href="/allstallions" id="button">View Available Stallions</a>
-	    <a href="/allmares" id="button">View Available Mares</a>
-	    <a href="/allstuds" id="button">View Available Studs</a>
-	    <a href="/allbroods" id="button">View Available Broodmares</a>
+	    <a href="/allstallions" class="button">View Available Stallions</a>
+	    <a href="/allmares" class="button">View Available Mares</a>
+	    <a href="/allstuds" class="button">View Available Studs</a>
+	    <a href="/allbroods" class="button">View Available Broodmares</a>
 	    <h2>Your Stable</h2>
 	    	<h2>Stallions</h2>
 	    	<table>
@@ -44,7 +44,7 @@
 	    		</tr>
 	    		<c:forEach items="${allStalls}" var="stallion">
 	    		<tr>
-	    			<td><a href="/stallion/${stallion.id}" id="buttonX">More Info</a></td>
+	    			<td><a href="/stallion/${stallion.id}" class="buttonX">More Info</a></td>
 	    			<td>${stallion.id}</td>
 	    			<td>${stallion.height}</td>
 	    			<td>${stallion.weight}</td>
@@ -67,7 +67,7 @@
 	    		</tr>
 	    		<c:forEach items="${allMares}" var="mare">
 	    		<tr>
-	    			<td><a href="/mareinfo/${mare.id}" id="buttonX">More Info</a></td>
+	    			<td><a href="/mareinfo/${mare.id}" class="buttonX">More Info</a></td>
 	    			<td>${mare.id}</td>
 	    			<td>${mare.height}</td>
 	    			<td>${mare.weight}</td>
@@ -90,7 +90,7 @@
 	    		</tr>
 	    		<c:forEach items="${allStuds}" var="stud">
 	    		<tr>
-	    			<td><a href="/studinfo/${stud.id}" id="buttonX">More Info</a></td>
+	    			<td><a href="/studinfo/${stud.id}" class="buttonX">More Info</a></td>
 	    			<td>${stud.id}</td>
 	    			<td>${stud.height}</td>
 	    			<td>${stud.weight}</td>
@@ -113,7 +113,7 @@
 	    		</tr>
 	    		<c:forEach items="${allBroods}" var="brood">
 	    		<tr>
-	    			<td><a href="/broodinfo/${brood.id}" id="buttonX">More Info</a></td>
+	    			<td><a href="/broodinfo/${brood.id}" class="buttonX">More Info</a></td>
 	    			<td>${brood.id}</td>
 	    			<td>${brood.height}</td>
 	    			<td>${brood.weight}</td>
