@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ryan.horsegod.models.Broodmare;
+import com.ryan.horsegod.models.Mare;
 import com.ryan.horsegod.models.Stallion;
 import com.ryan.horsegod.models.User;
 import com.ryan.horsegod.services.BroodmareService;
@@ -89,7 +89,6 @@ public class UserControl {
 			return "redirect:/registration";
 		} else {
 			model.addAttribute("currentUser", userServ.findByUsername(username));
-			model.addAttribute("allMares", mareServ.allOwnedMares(user.getId()));
 			model.addAttribute("allStuds", studServ.allOwnedStuds(user.getId()));
 			model.addAttribute("allBroods", broodServ.allOwnedBroods(user.getId()));
 			List<Stallion> stallion = stallServ.allOwnedStallions(user.getId());
@@ -101,7 +100,16 @@ public class UserControl {
 					notStud.add(stallion.get(i));
 				}
 			}
+			List<Mare> mare = mareServ.allOwnedMares(user.getId());
+			List<Mare> notBrood = new ArrayList<Mare>();
+			for(int i=0; i<mare.size(); i++) {
+				if(mare.get(i).getBroodmareId() == null) {
+					notBrood.add(mare.get(i));
+				}
+			}
 			model.addAttribute("allStalls", notStud);
+			model.addAttribute("allMares", notBrood);
+			
 			return "/horse/main/stable.jsp";
 		}
 	}
