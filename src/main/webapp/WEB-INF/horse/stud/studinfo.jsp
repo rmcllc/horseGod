@@ -34,7 +34,7 @@
 				<td>${stud.speed}</td>
 				<td>${stud.gait}</td>
 				<td>${stud.endurance}</td>
-				<th><a href="/findmare/${stud.id}" class="button">Select a Mare</a></th>
+				<th><a href="/findbrood/${stud.id}" class="button">Select a Mare</a></th>
 			</tr>
 		</table>
 	</div>

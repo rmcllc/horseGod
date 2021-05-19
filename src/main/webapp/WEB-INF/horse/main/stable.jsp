@@ -113,7 +113,7 @@
 	    		</tr>
 	    		<c:forEach items="${allBroods}" var="brood">
 	    		<tr>
-	    			<td><a href="/broodinfo/${brood.id}" class="buttonX">More Info</a></td>
+	    			<td><a href="/broodmareinfo/${brood.id}" class="buttonX">More Info</a></td>
 	    			<td>${brood.id}</td>
 	    			<td>${brood.height}</td>
 	    			<td>${brood.weight}</td>
