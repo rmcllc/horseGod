@@ -33,27 +33,14 @@ public class MareControl {
 	private UserService userServ;
 	private MareService mareServ;
 	private BroodmareService broodServ;
-	private StudService studServ;
-	private DamService damServ;
-	private SireService sireServ;
-	private FoalService foalServ;
-	private ColtService coltServ;
-	private FillyService fillyServ;
-	private StallionService stallServ;
+
 	
 	public MareControl(UserService userServ, StallionService stallServ, MareService mareServ, StudService studServ, BroodmareService broodServ, DamService damServ, SireService sireServ, FoalService foalServ, ColtService coltServ, FillyService fillyServ) {
 		this.mareServ = mareServ;
-		this.studServ = studServ;
-		this.damServ = damServ;
-		this.sireServ = sireServ;
-		this.foalServ = foalServ;
 		this.userServ = userServ;
-		this.coltServ = coltServ;
-		this.fillyServ = fillyServ;
-		this.stallServ = stallServ;
 		this.broodServ = broodServ;
 	}
-	
+	//list all available mares...mares that are not owned by the principal user
 	@RequestMapping("/allmares")
 	public String allMares(Principal principal, Model model) {
 		String username = principal.getName();
@@ -75,7 +62,7 @@ public class MareControl {
 		model.addAttribute("mare", mareServ.findMare(id));
 		return "/horse/mare/mareinfo.jsp";
 	}
-	
+	//creates a broodmare object containing the mare field values...updates Mare table with new Broodmare id 
 	@RequestMapping("/broodfarm/{id}")
 	public String mareFarm(@Valid @ModelAttribute("broodId") UUID broodId, BindingResult result, @ModelAttribute("mare") Mare mare, BindingResult result2, @ModelAttribute("broodmare") Broodmare brood, BindingResult result3, @PathVariable(value="id") UUID id, Principal principal, Model model) {
 		mare = mareServ.findMare(id);
